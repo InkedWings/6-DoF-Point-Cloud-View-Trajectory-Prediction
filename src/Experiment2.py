@@ -88,7 +88,6 @@ if __name__ == '__main__':
                                                                                 valid_ratio=valid_ratio)
 
     # Model Training
-    '''
     enc_trainer = ModelTrainer(model=encoder,
                                loss_func=loss_func,
                                optimizer=enc_optimizer,
@@ -136,6 +135,7 @@ if __name__ == '__main__':
                                  hidden_dim=hidden_dim)
 
     previous_loss = float('inf')
+    
     print("Decoder is training...")
     for epoch in tqdm(range(decoder_epoches)):
         train_loss = model_trainer.enc_dec_train3(train_loader=train_loader)
@@ -148,7 +148,6 @@ if __name__ == '__main__':
         valid_loss_list.append(valid_loss)
 
     print("Decoder is trained.")
-    '''
     # Result visualization
     result_visual = ResultVisualization(mode=mode,
                                         architecture=architecture,
